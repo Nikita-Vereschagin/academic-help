@@ -1,551 +1,553 @@
 {
-  "courses":[ {
-    "categories": [
-      {
-        "id": "introduction",
-        "name": "Введениев в направление",
-        "services": [
-          [
-            {
-              "id": "4ПР",
-              "name": "Практическое занятие 4. Развитие личных и деловых качеств современных бизнес-информатиков",
-              "time": "2 часа",
-              "difficulty": 3,
-              "priceFull": 300,
-              "note": "Отчет + презентация"
-            },
-            {
-              "id": "5ПР",
-              "name": "Практическое занятие 5. Введение в IT Project Management",
-              "time": "2 часа",
-              "difficulty": 3,
-              "priceFull": 300,
-              "note": "Отчет + презентация"
-            },
-            {
-              "id": "6ПР",
-              "name": "Практическое занятие 6. Введение в Data Analytics и Information Security",
-              "time": "2 часа",
-              "difficulty": 3,
-              "priceFull": 300,
-              "note": "Отчет + презентация"
-            },
-            {
-              "id": "6ПР-ДОП",
-              "name": "Практическое занятие 6. Введение в Data Analytics и Information Security (дополнительное)",
-              "time": "2 часа",
-              "difficulty": 3,
-              "priceFull": 300,
-              "note": "Отчет + презентация"
-            },
-            {
-              "id": "7ПР",
-              "name": "Практическое занятие 7. Введение в IT-Development и IT Support",
-              "time": "2 часа",
-              "difficulty": 3,
-              "priceFull": 300,
-              "note": "Отчет + презентация"
-            },
-            {
-              "id": "8ПР",
-              "name": "Практическое занятие 8. Введение в системную аналитику",
-              "time": "2 часа",
-              "difficulty": 3,
-              "priceFull": 300,
-              "note": "Отчет + презентация"
-            },
-            {
-              "id": "РГЗ-ВВН",
-              "name": "Контрольная работа. Введение в направление",
-              "time": "10 часов",
-              "difficulty": 8,
-              "priceFull": 1500,
-              "note": "Отчет + презентация"
-            }
+  "courses": [
+    {
+      "categories": [
+        {
+          "id": "introduction",
+          "name": "Введениев в направление",
+          "services": [
+            [
+              {
+                "id": "intro-practice-4",
+                "name": "Практическое занятие 4. Развитие личных и деловых качеств современных бизнес-информатиков",
+                "time": "2 часа",
+                "difficulty": 3,
+                "priceFull": 300,
+                "note": "Отчет + презентация"
+              },
+              {
+                "id": "intro-practice-5",
+                "name": "Практическое занятие 5. Введение в IT Project Management",
+                "time": "2 часа",
+                "difficulty": 3,
+                "priceFull": 300,
+                "note": "Отчет + презентация"
+              },
+              {
+                "id": "intro-practice-6",
+                "name": "Практическое занятие 6. Введение в Data Analytics и Information Security",
+                "time": "2 часа",
+                "difficulty": 3,
+                "priceFull": 300,
+                "note": "Отчет + презентация"
+              },
+              {
+                "id": "intro-practice-6-extra",
+                "name": "Практическое занятие 6. Введение в Data Analytics и Information Security (дополнительное)",
+                "time": "2 часа",
+                "difficulty": 3,
+                "priceFull": 300,
+                "note": "Отчет + презентация"
+              },
+              {
+                "id": "intro-practice-7",
+                "name": "Практическое занятие 7. Введение в IT-Development и IT Support",
+                "time": "2 часа",
+                "difficulty": 3,
+                "priceFull": 300,
+                "note": "Отчет + презентация"
+              },
+              {
+                "id": "intro-practice-8",
+                "name": "Практическое занятие 8. Введение в системную аналитику",
+                "time": "2 часа",
+                "difficulty": 3,
+                "priceFull": 300,
+                "note": "Отчет + презентация"
+              },
+              {
+                "id": "intro-coursework",
+                "name": "Контрольная работа. Введение в направление",
+                "time": "10 часов",
+                "difficulty": 8,
+                "priceFull": 1500,
+                "note": "Отчет + презентация"
+              }
+            ]
           ]
-        ]
-      },
-      {
-        "id": "it-programming",
-        "name": "Информационные технологии и основы программирования",
-        "services": [
-          [
-            {
-              "id": "1ЛБ",
-              "name": "Лабораторная работа №1",
-              "time": "3 часа",
-              "difficulty": 2,
-              "priceExplain": 350,
-              "priceFull": 550,
-              "note": "Основы использования Операционной системы Windows, основы кодирования информации, основы использования табличного редактора Microsoft Excel и Word"
-            },
-            {
-              "id": "2ЛБ",
-              "name": "Лабораторная работа №2",
-              "time": "3 часа",
-              "difficulty": 3,
-              "priceExplain": 400,
-              "priceFull": 600,
-              "note": "Перевод чисел в другие системы счисления, математические операции с числами, кодирование цифровой информации шифрование текста"
-            },
-            {
-              "id": "3ЛБ",
-              "name": "Лабораторная работа №3",
-              "time": "9 часов",
-              "difficulty": 8,
-              "priceExplain": 800,
-              "priceFull": 1200,
-              "note": "Windows/Linux"
-            },
-            {
-              "id": "4ЛБ",
-              "name": "Лабораторная работа №4",
-              "time": "5 часов",
-              "difficulty": 4,
-              "priceExplain": 450,
-              "priceFull": 700,
-              "note": "Microsoft Excel/Word, работа с формулами, графики"
-            },
-            {
-              "id": "5ЛБ",
-              "name": "Лабораторная работа №5",
-              "time": "9 часов",
-              "difficulty": 7,
-              "priceExplain": 550,
-              "priceFull": 800,
-              "priceExtra": 500,
-              "note": "Формулы Excel, выгрузка с WB(дополнительное задание)"
-            },
-            {
-              "id": "6ЛБ",
-              "name": "Лабораторная работа №6",
-              "time": "9 часов",
-              "difficulty": 8,
-              "priceExplain": 600,
-              "priceFull": 850,
-              "priceExtra": 500,
-              "note": "Формулы и массивы Excel, выгрузка PowerQuery(дополнительное задание)"
-            },
-            {
-              "id": "7ЛБ",
-              "name": "Лабораторная работа №7",
-              "time": "9 часов",
-              "difficulty": 9,
-              "priceExplain": 750,
-              "priceFull": 1100,
-              "priceExtra": 500,
-              "note": "Макросы и VBA, выгрузка с ЦБ(дополнительное задание)"
-            },
-            {
-              "id": "8ЛБ",
-              "name": "Лабораторная работа №8",
-              "time": "10 часов",
-              "difficulty": 9,
-              "priceExplain": 850,
-              "priceFull": 1200,
-              "priceExtra": 500,
-              "note": "Макросы и VBA, сложные макросы(дополнительное задание)"
-            },
-            {
-              "id": "РГЗ-ИТ",
-              "name": "РГЗ. Информационные технологии и основы программирования",
-              "time": "14 часов",
-              "difficulty": 10,
-              "priceFull": 1600,
-              "note": "Коды + блок-схемы"
-            }
-          ],
-          [
-            {
-              "id": "1ЛБ",
-              "name": "Лабораторная 1",
-              "time": "4 часа",
-              "difficulty": 4,
-              "priceExplain": 350,
-              "priceFull": 550,
-              "note": "Черепаха + вывод информации в интерпритатор"
-            },
-            {
-              "id": "2ЛБ",
-              "name": "Лабораторная 2",
-              "time": "5 часов",
-              "difficulty": 5,
-              "priceExplain": 450,
-              "priceFull": 650,
-              "priceExtra": 200,
-              "note": "Операции с числами и строками, калькулятор(дополнительное задание)"
-            },
-            {
-              "id": "3ЛБ",
-              "name": "Лабораторная 3",
-              "time": "5 часов",
-              "difficulty": 5,
-              "priceExplain": 450,
-              "priceFull": 700,
-              "note": "Условные операторы, простые алгоритмы"
-            },
-            {
-              "id": "4ЛБ",
-              "name": "Лабораторная 4",
-              "time": "6 часов",
-              "difficulty": 6,
-              "priceExplain": 450,
-              "priceFull": 700,
-              "note": "Функции, алгоритмы с функциями"
-            },
-            {
-              "id": "5ЛБ",
-              "name": "Лабораторная 5",
-              "time": "9 часов",
-              "difficulty": 9,
-              "priceExplain": 800,
-              "priceFull": 1100,
-              "note": "Классы и объекты, алгоритмы с классами"
-            },
-            {
-              "id": "6ЛБ",
-              "name": "Лабораторная 6",
-              "time": "9 часов",
-              "difficulty": 8,
-              "priceExplain": 750,
-              "priceFull": 1000,
-              "note": "Работа с файлами, REST API"
-            },
-            {
-              "id": "7ЛБ",
-              "name": "Лабораторная 7",
-              "time": "9 часов",
-              "difficulty": 9,
-              "priceExplain": 800,
-              "priceFull": 1100,
-              "note": "Работа с библиотеками, numpy, pandas"
-            },
-            {
-              "id": "8ЛБ",
-              "name": "Лабораторная 8",
-              "time": "10 часов",
-              "difficulty": 9,
-              "priceExplain": 850,
-              "priceFull": 1200,
-              "note": "Работа с библиотеками, сложные алгоритмы"
-            },
-            {
-              "id": "РГЗ-ИТ",
-              "name": "РГЗ. Информационные технологии и основы программирования",
-              "time": "17 часов",
-              "difficulty": 10,
-              "priceFull": 1700,
-              "note": "Коды + блок-схемы"
-            }
+        },
+        {
+          "id": "it-programming",
+          "name": "Информационные технологии и основы программирования",
+          "services": [
+            [
+              {
+                "id": "it-lab-1",
+                "name": "Лабораторная работа №1",
+                "time": "3 часа",
+                "difficulty": 2,
+                "priceExplain": 350,
+                "priceFull": 550,
+                "note": "Основы использования Операционной системы Windows, основы кодирования информации, основы использования табличного редактора Microsoft Excel и Word"
+              },
+              {
+                "id": "it-lab-2",
+                "name": "Лабораторная работа №2",
+                "time": "3 часа",
+                "difficulty": 3,
+                "priceExplain": 400,
+                "priceFull": 600,
+                "note": "Перевод чисел в другие системы счисления, математические операции с числами, кодирование цифровой информации шифрование текста"
+              },
+              {
+                "id": "it-lab-3",
+                "name": "Лабораторная работа №3",
+                "time": "9 часов",
+                "difficulty": 8,
+                "priceExplain": 800,
+                "priceFull": 1200,
+                "note": "Windows/Linux"
+              },
+              {
+                "id": "it-lab-4",
+                "name": "Лабораторная работа №4",
+                "time": "5 часов",
+                "difficulty": 4,
+                "priceExplain": 450,
+                "priceFull": 700,
+                "note": "Microsoft Excel/Word, работа с формулами, графики"
+              },
+              {
+                "id": "it-lab-5",
+                "name": "Лабораторная работа №5",
+                "time": "9 часов",
+                "difficulty": 7,
+                "priceExplain": 550,
+                "priceFull": 800,
+                "priceExtra": 500,
+                "note": "Формулы Excel, выгрузка с WB(дополнительное задание)"
+              },
+              {
+                "id": "it-lab-6",
+                "name": "Лабораторная работа №6",
+                "time": "9 часов",
+                "difficulty": 8,
+                "priceExplain": 600,
+                "priceFull": 850,
+                "priceExtra": 500,
+                "note": "Формулы и массивы Excel, выгрузка PowerQuery(дополнительное задание)"
+              },
+              {
+                "id": "it-lab-7",
+                "name": "Лабораторная работа №7",
+                "time": "9 часов",
+                "difficulty": 9,
+                "priceExplain": 750,
+                "priceFull": 1100,
+                "priceExtra": 500,
+                "note": "Макросы и VBA, выгрузка с ЦБ(дополнительное задание)"
+              },
+              {
+                "id": "it-lab-8",
+                "name": "Лабораторная работа №8",
+                "time": "10 часов",
+                "difficulty": 9,
+                "priceExplain": 850,
+                "priceFull": 1200,
+                "priceExtra": 500,
+                "note": "Макросы и VBA, сложные макросы(дополнительное задание)"
+              },
+              {
+                "id": "it-coursework",
+                "name": "РГЗ. Информационные технологии и основы программирования",
+                "time": "14 часов",
+                "difficulty": 10,
+                "priceFull": 1600,
+                "note": "Коды + блок-схемы"
+              }
+            ],
+            [
+              {
+                "id": "prog-lab-1",
+                "name": "Лабораторная 1",
+                "time": "4 часа",
+                "difficulty": 4,
+                "priceExplain": 350,
+                "priceFull": 550,
+                "note": "Черепаха + вывод информации в интерпритатор"
+              },
+              {
+                "id": "prog-lab-2",
+                "name": "Лабораторная 2",
+                "time": "5 часов",
+                "difficulty": 5,
+                "priceExplain": 450,
+                "priceFull": 650,
+                "priceExtra": 200,
+                "note": "Операции с числами и строками, калькулятор(дополнительное задание)"
+              },
+              {
+                "id": "prog-lab-3",
+                "name": "Лабораторная 3",
+                "time": "5 часов",
+                "difficulty": 5,
+                "priceExplain": 450,
+                "priceFull": 700,
+                "note": "Условные операторы, простые алгоритмы"
+              },
+              {
+                "id": "prog-lab-4",
+                "name": "Лабораторная 4",
+                "time": "6 часов",
+                "difficulty": 6,
+                "priceExplain": 450,
+                "priceFull": 700,
+                "note": "Функции, алгоритмы с функциями"
+              },
+              {
+                "id": "prog-lab-5",
+                "name": "Лабораторная 5",
+                "time": "9 часов",
+                "difficulty": 9,
+                "priceExplain": 800,
+                "priceFull": 1100,
+                "note": "Классы и объекты, алгоритмы с классами"
+              },
+              {
+                "id": "prog-lab-6",
+                "name": "Лабораторная 6",
+                "time": "9 часов",
+                "difficulty": 8,
+                "priceExplain": 750,
+                "priceFull": 1000,
+                "note": "Работа с файлами, REST API"
+              },
+              {
+                "id": "prog-lab-7",
+                "name": "Лабораторная 7",
+                "time": "9 часов",
+                "difficulty": 9,
+                "priceExplain": 800,
+                "priceFull": 1100,
+                "note": "Работа с библиотеками, numpy, pandas"
+              },
+              {
+                "id": "prog-lab-8",
+                "name": "Лабораторная 8",
+                "time": "10 часов",
+                "difficulty": 9,
+                "priceExplain": 850,
+                "priceFull": 1200,
+                "note": "Работа с библиотеками, сложные алгоритмы"
+              },
+              {
+                "id": "prog-coursework",
+                "name": "РГЗ. Информационные технологии и основы программирования",
+                "time": "17 часов",
+                "difficulty": 10,
+                "priceFull": 1700,
+                "note": "Коды + блок-схемы"
+              }
+            ]
           ]
-        ]
-      },
-      {
-        "id": "linear-algebra",
-        "name": "Линейная алгебра",
-        "services": [
-          [
-            {
-              "id": "ИДЗ-1",
-              "name": "ИДЗ 1",
-              "time": "4 часа",
-              "difficulty": 4,
-              "priceFull": 400,
-              "note": "В зависимости от объема задания, договорная"
-            },
-            {
-              "id": "ИДЗ-2",
-              "name": "ИДЗ 2",
-              "time": "6 часов",
-              "difficulty": 5,
-              "priceFull": 500,
-              "note": "В зависимости от объема задания, договорная"
-            },
-            {
-              "id": "ИДЗ-3",
-              "name": "ИДЗ 3",
-              "time": "7 часов",
-              "difficulty": 6,
-              "priceFull": 600,
-              "note": "В зависимости от объема задания, договорная"
-            }
+        },
+        {
+          "id": "linear-algebra",
+          "name": "Линейная алгебра",
+          "services": [
+            [
+              {
+                "id": "la-assign-1",
+                "name": "ИДЗ 1",
+                "time": "4 часа",
+                "difficulty": 4,
+                "priceFull": 400,
+                "note": "В зависимости от объема задания, договорная"
+              },
+              {
+                "id": "la-assign-2",
+                "name": "ИДЗ 2",
+                "time": "6 часов",
+                "difficulty": 5,
+                "priceFull": 500,
+                "note": "В зависимости от объема задания, договорная"
+              },
+              {
+                "id": "la-assign-3",
+                "name": "ИДЗ 3",
+                "time": "7 часов",
+                "difficulty": 6,
+                "priceFull": 600,
+                "note": "В зависимости от объема задания, договорная"
+              }
+            ]
           ]
-        ]
-      },
-      {
-        "id": "math-analysis",
-        "name": "Математический анализ",
-        "services": [
-          [
-            {
-              "id": "ИДЗ-1",
-              "name": "ИДЗ 1",
-              "time": "5 часов",
-              "difficulty": 6,
-              "priceFull": 450,
-              "note": "В зависимости от объема задания, договорная"
-            },
-            {
-              "id": "ИДЗ-2",
-              "name": "ИДЗ 2",
-              "time": "6 часов",
-              "difficulty": 7,
-              "priceFull": 550,
-              "note": "В зависимости от объема задания, договорная"
-            },
-            {
-              "id": "ИДЗ-3",
-              "name": "ИДЗ 3",
-              "time": "6 часов",
-              "difficulty": 8,
-              "priceFull": 650,
-              "note": "В зависимости от объема задания, договорная"
-            }
-          ],
-          [
-            {
-              "id": "ИДЗ-1",
-              "name": "ИДЗ 1",
-              "time": "6 часов",
-              "difficulty": 6,
-              "priceFull": 500,
-              "note": "В зависимости от объема задания, договорная"
-            },
-            {
-              "id": "ИДЗ-2",
-              "name": "ИДЗ 2",
-              "time": "7 часов",
-              "difficulty": 7,
-              "priceFull": 600,
-              "note": "В зависимости от объема задания, договорная"
-            },
-            {
-              "id": "ИДЗ-3",
-              "name": "ИДЗ 3",
-              "time": "7 часов",
-              "difficulty": 8,
-              "priceFull": 700,
-              "note": "В зависимости от объема задания, договорная"
-            }
+        },
+        {
+          "id": "math-analysis",
+          "name": "Математический анализ",
+          "services": [
+            [
+              {
+                "id": "ma-assign-1-set1",
+                "name": "ИДЗ 1",
+                "time": "5 часов",
+                "difficulty": 6,
+                "priceFull": 450,
+                "note": "В зависимости от объема задания, договорная"
+              },
+              {
+                "id": "ma-assign-2-set1",
+                "name": "ИДЗ 2",
+                "time": "6 часов",
+                "difficulty": 7,
+                "priceFull": 550,
+                "note": "В зависимости от объема задания, договорная"
+              },
+              {
+                "id": "ma-assign-3-set1",
+                "name": "ИДЗ 3",
+                "time": "6 часов",
+                "difficulty": 8,
+                "priceFull": 650,
+                "note": "В зависимости от объема задания, договорная"
+              }
+            ],
+            [
+              {
+                "id": "ma-assign-1-set2",
+                "name": "ИДЗ 1",
+                "time": "6 часов",
+                "difficulty": 6,
+                "priceFull": 500,
+                "note": "В зависимости от объема задания, договорная"
+              },
+              {
+                "id": "ma-assign-2-set2",
+                "name": "ИДЗ 2",
+                "time": "7 часов",
+                "difficulty": 7,
+                "priceFull": 600,
+                "note": "В зависимости от объема задания, договорная"
+              },
+              {
+                "id": "ma-assign-3-set2",
+                "name": "ИДЗ 3",
+                "time": "7 часов",
+                "difficulty": 8,
+                "priceFull": 700,
+                "note": "В зависимости от объема задания, договорная"
+              }
+            ]
           ]
-        ]
-      },
-      {
-        "id": "digital-society",
-        "name": "Основы цифрового общества",
-        "services": [
-          [
-            {
-              "id": "ЛБ",
-              "name": "Лабораторные работы (1-5)",
-              "time": "2-10 часов",
-              "difficulty": 8,
-              "priceFull": 600,
-              "note": "В зависимости от лабораторной работы цена договорная. Прикрепляйте методичку работы. Цена начинается от 600₽"
-            },
-            {
-              "id": "РГЗ-ОЦО",
-              "name": "Семестровая контрольная работа. Основы цифрового общества",
-              "time": "12-24 часа",
-              "difficulty": 10,
-              "priceFull": 2500,
-              "note": "Цена договорная, от 2500₽. В зависимости от объема задания. Прикрепляйте тему контрольной работы и методичку"
-            }
+        },
+        {
+          "id": "digital-society",
+          "name": "Основы цифрового общества",
+          "services": [
+            [
+              {
+                "id": "ds-labs",
+                "name": "Лабораторные работы (1-5)",
+                "time": "2-10 часов",
+                "difficulty": 8,
+                "priceFull": 600,
+                "note": "В зависимости от лабораторной работы цена договорная. Прикрепляйте методичку работы. Цена начинается от 600₽"
+              },
+              {
+                "id": "ds-coursework",
+                "name": "Семестровая контрольная работа. Основы цифрового общества",
+                "time": "12-24 часа",
+                "difficulty": 10,
+                "priceFull": 2500,
+                "note": "Цена договорная, от 2500₽. В зависимости от объема задания. Прикрепляйте тему контрольной работы и методичку"
+              }
+            ]
           ]
-        ]
-      },
-      {
-        "id": "macroeconomics",
-        "name": "Макроэкономика",
-        "services": [
-          [
-            {
-              "id": "РГЗ-МАКРО",
-              "name": "РГЗ",
-              "time": "5-7 часов",
-              "difficulty": 8,
-              "priceFull": 1200,
-              "note": "Договорная, от 1200₽. Прикрепляйте тему РГЗ и методичку"
-            }
+        },
+        {
+          "id": "macroeconomics",
+          "name": "Макроэкономика",
+          "services": [
+            [
+              {
+                "id": "macro-coursework",
+                "name": "РГЗ",
+                "time": "5-7 часов",
+                "difficulty": 8,
+                "priceFull": 1200,
+                "note": "Договорная, от 1200₽. Прикрепляйте тему РГЗ и методичку"
+              }
+            ]
           ]
-        ]
-      },
-      {
-        "id": "management",
-        "name": "Менеджмент",
-        "services": [
-          [
-            {
-              "id": "1ПР",
-              "name": "Конфликты в системе управления",
-              "time": "1,5 часа",
-              "difficulty": 3,
-              "priceFull": 300
-            },
-            {
-              "id": "2ПР",
-              "name": "Принятие плановых решений",
-              "time": "3-4 часа",
-              "difficulty": 5,
-              "priceFull": 750
-            },
-            {
-              "id": "3ПР",
-              "name": "Власть и лидерство",
-              "time": "2 часа",
-              "difficulty": 3,
-              "priceFull": 300
-            },
-            {
-              "id": "4ПР",
-              "name": "Самоменеджмент",
-              "time": "4 часа",
-              "difficulty": 5,
-              "priceFull": 500
-            },
-            {
-              "id": "5ПР",
-              "name": "Модель Остевальдера-Пинье",
-              "time": "3 часа",
-              "difficulty": 4,
-              "priceFull": 450
-            },
-            {
-              "id": "6ПР",
-              "name": "Миссия организации",
-              "time": "4 часа",
-              "difficulty": 7,
-              "priceFull": 700
-            },
-            {
-              "id": "7ПР",
-              "name": "PEST-анализ",
-              "time": "5 часов",
-              "difficulty": 7,
-              "priceFull": 750
-            },
-            {
-              "id": "8ПР",
-              "name": "Анализ внешней среды",
-              "time": "5 часа",
-              "difficulty": 7,
-              "priceFull": 800
-            },
-            {
-              "id": "9ПР",
-              "name": "SWOT-анализ",
-              "time": "4 часа",
-              "difficulty": 5,
-              "priceFull": 650
-            },
-            {
-              "id": "10ПР",
-              "name": "Стратегия",
-              "time": "2 часа",
-              "difficulty": 3,
-              "priceFull": 400
-            },
-            {
-              "id": "11ПР",
-              "name": "Стратегическое управление",
-              "time": "1-1,5 часа",
-              "difficulty": 3,
-              "priceFull": 300
-            },
-            {
-              "id": "12ПР",
-              "name": "Организационные структуры",
-              "time": "1-1,5 часа",
-              "difficulty": 3,
-              "priceFull": 350
-            },
-            {
-              "id": "14ПР",
-              "name": "Корпоративная культура",
-              "time": "1 час",
-              "difficulty": 2,
-              "priceFull": 250
-            },
-            {
-              "id": "15ПР",
-              "name": "Дисбаланс интересов",
-              "time": "5 часа",
-              "difficulty": 7,
-              "priceFull": 800
-            },
-            {
-              "id": "РГЗ-МЕН",
-              "name": "РГЗ. Менеджмент",
-              "time": "12-24 часов",
-              "difficulty": 10,
-              "priceFull": 3000,
-              "note": "Цена договорная, от 2500₽. В зависимости от объема задания. Прикрепляйте тему и методичку"
-            }
+        },
+        {
+          "id": "management",
+          "name": "Менеджмент",
+          "services": [
+            [
+              {
+                "id": "mgmt-practice-1",
+                "name": "Конфликты в системе управления",
+                "time": "1,5 часа",
+                "difficulty": 3,
+                "priceFull": 300
+              },
+              {
+                "id": "mgmt-practice-2",
+                "name": "Принятие плановых решений",
+                "time": "3-4 часа",
+                "difficulty": 5,
+                "priceFull": 750
+              },
+              {
+                "id": "mgmt-practice-3",
+                "name": "Власть и лидерство",
+                "time": "2 часа",
+                "difficulty": 3,
+                "priceFull": 300
+              },
+              {
+                "id": "mgmt-practice-4",
+                "name": "Самоменеджмент",
+                "time": "4 часа",
+                "difficulty": 5,
+                "priceFull": 500
+              },
+              {
+                "id": "mgmt-practice-5",
+                "name": "Модель Остевальдера-Пинье",
+                "time": "3 часа",
+                "difficulty": 4,
+                "priceFull": 450
+              },
+              {
+                "id": "mgmt-practice-6",
+                "name": "Миссия организации",
+                "time": "4 часа",
+                "difficulty": 7,
+                "priceFull": 700
+              },
+              {
+                "id": "mgmt-practice-7",
+                "name": "PEST-анализ",
+                "time": "5 часов",
+                "difficulty": 7,
+                "priceFull": 750
+              },
+              {
+                "id": "mgmt-practice-8",
+                "name": "Анализ внешней среды",
+                "time": "5 часа",
+                "difficulty": 7,
+                "priceFull": 800
+              },
+              {
+                "id": "mgmt-practice-9",
+                "name": "SWOT-анализ",
+                "time": "4 часа",
+                "difficulty": 5,
+                "priceFull": 650
+              },
+              {
+                "id": "mgmt-practice-10",
+                "name": "Стратегия",
+                "time": "2 часа",
+                "difficulty": 3,
+                "priceFull": 400
+              },
+              {
+                "id": "mgmt-practice-11",
+                "name": "Стратегическое управление",
+                "time": "1-1,5 часа",
+                "difficulty": 3,
+                "priceFull": 300
+              },
+              {
+                "id": "mgmt-practice-12",
+                "name": "Организационные структуры",
+                "time": "1-1,5 часа",
+                "difficulty": 3,
+                "priceFull": 350
+              },
+              {
+                "id": "mgmt-practice-14",
+                "name": "Корпоративная культура",
+                "time": "1 час",
+                "difficulty": 2,
+                "priceFull": 250
+              },
+              {
+                "id": "mgmt-practice-15",
+                "name": "Дисбаланс интересов",
+                "time": "5 часа",
+                "difficulty": 7,
+                "priceFull": 800
+              },
+              {
+                "id": "mgmt-coursework",
+                "name": "РГЗ. Менеджмент",
+                "time": "12-24 часов",
+                "difficulty": 10,
+                "priceFull": 3000,
+                "note": "Цена договорная, от 2500₽. В зависимости от объема задания. Прикрепляйте тему и методичку"
+              }
+            ]
           ]
-        ]
-      },
-      {
-        "id": "law",
-        "name": "Правоведение",
-        "services": [
-          [
-            {
-              "id": "РГЗ-ПРАВ",
-              "name": "РГЗ",
-              "time": "5-7 часов",
-              "difficulty": 8,
-              "priceFull": 800,
-              "note": "Договорная, от 800₽. Прикрепляйте методичку и тему РГЗ."
-            }
+        },
+        {
+          "id": "law",
+          "name": "Правоведение",
+          "services": [
+            [
+              {
+                "id": "law-coursework",
+                "name": "РГЗ",
+                "time": "5-7 часов",
+                "difficulty": 8,
+                "priceFull": 800,
+                "note": "Договорная, от 800₽. Прикрепляйте методичку и тему РГЗ."
+              }
+            ]
           ]
-        ]
-      },
-      {
-        "id": "requirements",
-        "name": "Управление требованиями",
-        "services": [
-          [
-            {
-              "id": "1ЛР",
-              "name": "Сценарии и варианты использования",
-              "time": "6 часов",
-              "difficulty": 6,
-              "priceFull": 1000
-            },
-            {
-              "id": "2ЛР",
-              "name": "Пользовательские истории",
-              "time": "6 часов",
-              "difficulty": 6,
-              "priceFull": 1000
-            },
-            {
-              "id": "3ЛР",
-              "name": "Персонажи. Карта эмпатии",
-              "time": "8 часов",
-              "difficulty": 7,
-              "priceFull": 1300
-            },
-            {
-              "id": "4ЛР",
-              "name": "Диаграмма классов",
-              "time": "6 часов",
-              "difficulty": 6,
-              "priceFull": 1000
-            },
-            {
-              "id": "РГЗ-УТ",
-              "name": "РГЗ. Управление требованиями",
-              "time": "4-20 часов",
-              "difficulty": 10,
-              "priceFull": 2500,
-              "note": "Цена договорная, от 2500₽. В зависимости от объема задания. Прикрепляйте тему контрольной работы и методичку"
-            }
+        },
+        {
+          "id": "requirements",
+          "name": "Управление требованиями",
+          "services": [
+            [
+              {
+                "id": "req-scenarios",
+                "name": "Сценарии и варианты использования",
+                "time": "6 часов",
+                "difficulty": 6,
+                "priceFull": 1000
+              },
+              {
+                "id": "req-user-stories",
+                "name": "Пользовательские истории",
+                "time": "6 часов",
+                "difficulty": 6,
+                "priceFull": 1000
+              },
+              {
+                "id": "req-emp-map",
+                "name": "Персонажи. Карта эмпатии",
+                "time": "8 часов",
+                "difficulty": 7,
+                "priceFull": 1300
+              },
+              {
+                "id": "req-class-diagram",
+                "name": "Диаграмма классов",
+                "time": "6 часов",
+                "difficulty": 6,
+                "priceFull": 1000
+              },
+              {
+                "id": "req-coursework",
+                "name": "РГЗ. Управление требованиями",
+                "time": "4-20 часов",
+                "difficulty": 10,
+                "priceFull": 2500,
+                "note": "Цена договорная, от 2500₽. В зависимости от объема задания. Прикрепляйте тему контрольной работы и методичку"
+              }
+            ]
           ]
-        ]
-      }
-    ]
-  }],
+        }
+      ]
+    }
+  ],
   "contact": {
     "telegram": "helper_fbi",
     "chatLink": "https://t.me/+YLeeB9QgWn4zZmJi"

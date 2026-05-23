@@ -1,0 +1,441 @@
+---
+import data from "../data/services.json";
+
+interface Props {
+  currentCourse?: number;
+  currentCategory?: string;
+}
+
+const { currentCourse, currentCategory } = Astro.props;
+---
+
+<nav class="bg-white shadow-lg sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <!-- Верхняя панель -->
+    <div class="flex items-center justify-between h-16">
+      <!-- Логотип -->
+      <a href="/" class="flex items-center gap-2 group">
+        <div>
+          <span
+            class="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent"
+          >
+            FBI Answers
+          </span>
+          <p class="text-xs text-gray-500 -mt-1">Учебная помощь</p>
+        </div>
+      </a>
+
+      <!-- Десктоп меню (видимо только на lg+) -->
+      <div class="hidden lg:flex items-center gap-1">
+        <a
+          href="#"
+          class="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium flex items-center gap-2 rounded-lg hover:bg-gray-50 transition-transform hover:scale-105"
+        >
+          <svg
+            class="w-4 h-4 transition-transform hover:scale-110"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+            ></path>
+          </svg>
+          Главная
+        </a>
+
+        <!-- Кнопка Услуги с выпадающим меню -->
+        <div class="relative" id="desktopServicesDropdown">
+          <button
+            id="desktopServicesBtn"
+            class="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium flex items-center gap-2 rounded-lg hover:bg-gray-50 transition-transform hover:scale-105"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <svg
+              class="w-4 h-4 transition-transform hover:scale-110"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+              ></path>
+            </svg>
+            Услуги
+            <svg
+              id="desktopArrow"
+              class="w-4 h-4 transition-transform duration-200"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+
+          <!-- Выпадающее меню (скрыто по умолчанию) -->
+          <div
+            id="desktopServicesMenu"
+            class="absolute right-0 mt-2 w-80 bg-white rounded-xl shadow-2xl border border-gray-100 py-3 hidden z-50 animate-fadeIn"
+          >
+            <!-- Курсы -->
+            <div class="px-3 pb-2 border-b border-gray-100">
+              <h4
+                class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2"
+              >
+                Курсы
+              </h4>
+              <div class="grid grid-cols-2 gap-1.5">
+                {
+                  data.courses &&
+                    data.courses.map((course, idx) => (
+                      <a
+                        href={`#course-${idx + 1}`}
+                        class={`px-3 py-2 rounded-lg text-xs font-medium transition flex items-center gap-2 ${
+                          currentCourse === idx + 1
+                            ? "bg-blue-600 text-white"
+                            : "text-gray-700 hover:bg-gray-50"
+                        }`}
+                      >
+                        <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-bold shrink-0">
+                          {idx + 1}
+                        </span>
+                        Курс
+                      </a>
+                    ))
+                }
+              </div>
+            </div>
+
+            <!-- Дисциплины -->
+            {
+              data.courses && data.courses[0] && data.courses[0].categories && (
+                <div class="px-3 pt-3">
+                  <h4 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">
+                    Дисциплины
+                  </h4>
+                  <div class="flex flex-wrap gap-1.5 max-h-40 overflow-y-auto">
+                    {data.courses[0].categories.map((cat, idx) => (
+                      <a
+                        href={`#category-${1}-${cat.id}`}
+                        class={`px-2.5 py-1.5 rounded-lg text-xs font-medium transition ${
+                          currentCategory === cat.id
+                            ? "bg-indigo-600 text-white"
+                            : "bg-gray-50 text-gray-700 hover:bg-gray-100"
+                        }`}
+                        title={cat.name}
+                      >
+                        {cat.name.length > 20
+                          ? cat.name.substring(0, 17) + "..."
+                          : cat.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )
+            }
+          </div>
+        </div>
+
+        <a
+          href="https://t.me/helper_fbi"
+          target="_blank"
+          rel="noopener"
+          class="ml-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium transition flex items-center gap-2 rounded-lg shadow-md hover:shadow-lg hover:scale-105"
+        >
+          <svg
+            class="w-4 h-4 transition-transform hover:scale-110"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"
+            ></path>
+          </svg>
+          Телега
+        </a>
+      </div>
+
+      <!-- Кнопка бургер (только мобильная версия) -->
+      <button
+        id="menuBtn"
+        class="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition focus:outline-none focus:ring-2 focus:ring-blue-500"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+      >
+        <svg
+          id="iconMenu"
+          class="w-6 h-6 text-gray-700 block transition-opacity duration-300"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg
+          id="iconClose"
+          class="w-6 h-6 text-gray-700 hidden transition-opacity duration-300"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Выпадающее меню (только мобильная/планшет) -->
+    <div
+      id="mobileMenu"
+      class="hidden lg:hidden border-t border-gray-100 py-4 animate-fadeIn"
+    >
+      <div class="space-y-4">
+        <!-- Быстрые ссылки -->
+        <div class="flex gap-2 pb-3 border-b border-gray-100">
+          <a
+            href="/"
+            class="flex-1 text-center py-2.5 px-3 bg-gray-50 hover:bg-gray-100 rounded-lg text-sm font-medium text-gray-700 transition flex items-center justify-center gap-2"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+              ></path>
+            </svg>
+            Главная
+          </a>
+          <a
+            href="https://t.me/helper_fbi"
+            target="_blank"
+            class="flex-1 text-center py-2.5 px-3 bg-blue-50 hover:bg-blue-100 rounded-lg text-sm font-medium text-blue-700 transition flex items-center justify-center gap-2"
+          >
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"
+              ></path>
+            </svg>
+            Telegram
+          </a>
+        </div>
+
+        <!-- Курсы -->
+        <div>
+          <h3
+            class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 px-1"
+          >
+            Курсы
+          </h3>
+          <div class="grid grid-cols-2 gap-2">
+            {
+              data.courses &&
+                data.courses.map((course, idx) => (
+                  <a
+                    href={`#course-${idx + 1}`}
+                    class={`px-3 py-2 rounded-lg text-xs font-medium transition flex items-center gap-2 ${
+                      currentCourse === idx + 1
+                        ? "bg-blue-600 text-white"
+                        : "text-gray-700 hover:bg-gray-50"
+                    }`}
+                  >
+                    <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-bold shrink-0">
+                      {idx + 1}
+                    </span>
+                    Курс
+                  </a>
+                ))
+            }
+          </div>
+        </div>
+
+        <!-- Дисциплины -->
+        {
+          data.courses && data.courses[0] && data.courses[0].categories && (
+            <div>
+              <h3 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 px-1">
+                Дисциплины
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                {data.courses[0].categories.map((cat) => (
+                  <a
+                    href={`#category-${1}-${cat.id}`}
+                    class={`px-3 py-2 rounded-lg text-xs font-medium transition ${currentCategory === cat.id ? "bg-indigo-600 text-white shadow-md" : "bg-gray-50 text-gray-700 hover:bg-gray-100 border border-gray-200"}`}
+                    title={cat.name}
+                  >
+                    {cat.name.length > 25
+                      ? cat.name.substring(0, 22) + "..."
+                      : cat.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Плавный скролл для якорных ссылок
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      const href = this.getAttribute("href");
+      if (href && href !== "#") {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+    });
+  });
+
+  // === ДЕСКТОП: Выпадающее меню "Услуги" ===
+  if (typeof window !== "undefined") {
+    const desktopBtn = document.getElementById("desktopServicesBtn");
+    const desktopMenu = document.getElementById("desktopServicesMenu");
+    const desktopArrow = document.getElementById("desktopArrow");
+    const dropdownContainer = document.getElementById(
+      "desktopServicesDropdown",
+    );
+
+    if (desktopBtn && desktopMenu && desktopArrow && dropdownContainer) {
+      let isDesktopMenuOpen = false;
+
+      function toggleDesktopMenu() {
+        isDesktopMenuOpen = !isDesktopMenuOpen;
+
+        if (isDesktopMenuOpen) {
+          desktopMenu.classList.remove("hidden");
+          desktopBtn.setAttribute("aria-expanded", "true");
+          desktopArrow.classList.add("rotate-180");
+        } else {
+          desktopMenu.classList.add("hidden");
+          desktopBtn.setAttribute("aria-expanded", "false");
+          desktopArrow.classList.remove("rotate-180");
+        }
+      }
+
+      // Клик по кнопке
+      desktopBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggleDesktopMenu();
+      });
+
+      // Закрытие при клике вне меню
+      document.addEventListener("click", (e: Event) => {
+        const target = e.target as Node;
+        if (isDesktopMenuOpen && !dropdownContainer.contains(target)) {
+          toggleDesktopMenu();
+        }
+      });
+
+      // Закрытие по Escape
+      document.addEventListener("keydown", (e: KeyboardEvent) => {
+        if (e.key === "Escape" && isDesktopMenuOpen) {
+          toggleDesktopMenu();
+        }
+      });
+
+      // Закрытие при клике на ссылку внутри меню
+      desktopMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (isDesktopMenuOpen) toggleDesktopMenu();
+        });
+      });
+    }
+  }
+
+  // === МОБИЛЬНЫЙ: Бургер-меню ===
+  if (typeof window !== "undefined") {
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const iconMenu = document.getElementById("iconMenu");
+    const iconClose = document.getElementById("iconClose");
+
+    // Проверяем, что элементы существуют (только мобильная версия)
+    if (menuBtn && mobileMenu && iconMenu && iconClose) {
+      let isMenuOpen = false;
+
+      function toggleMenu() {
+        isMenuOpen = !isMenuOpen;
+
+        if (isMenuOpen) {
+          mobileMenu.classList.remove("hidden");
+          menuBtn.setAttribute("aria-expanded", "true");
+          iconMenu.classList.add("hidden");
+          iconClose.classList.remove("hidden");
+        } else {
+          mobileMenu.classList.add("hidden");
+          menuBtn.setAttribute("aria-expanded", "false");
+          iconMenu.classList.remove("hidden");
+          iconClose.classList.add("hidden");
+        }
+      }
+
+      menuBtn.addEventListener("click", toggleMenu);
+
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (isMenuOpen) toggleMenu();
+        });
+      });
+
+      document.addEventListener("click", (e: Event) => {
+        const target = e.target as Node;
+        if (
+          isMenuOpen &&
+          !menuBtn.contains(target) &&
+          !mobileMenu.contains(target)
+        ) {
+          toggleMenu();
+        }
+      });
+    }
+  }
+</script>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fadeIn {
+    animation: fadeIn 0.25s ease-out;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
